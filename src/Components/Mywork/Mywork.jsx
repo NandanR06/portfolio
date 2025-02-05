@@ -15,14 +15,14 @@ export default function Mywork() {
             <div className="work-content"> {
                 MyWork.map((work1, index) => (<div key={index} className='work-item'>
                     {/* <h1>{work1.w_no}</h1> */}
-                    <img src={work1.w_img} alt="work" />
-                    {/* <p>{work1.w_name}</p> */}
+                    <a href={work1.link}><img src={work1.w_img} alt="work" /></a>
+                    <p>{work1.w_name}</p>
                 </div>
             ))}
               
             </div>
             <div className="show-more">
-                <p>Show More</p>
+                <p><a href="https://github.com/NandanR06?tab=repositories">Show More</a></p>
                 <EastIcon/>
             </div>
             

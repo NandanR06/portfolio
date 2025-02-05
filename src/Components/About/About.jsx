@@ -16,22 +16,25 @@ export default function About() {
                 </div>
                 <div className="col-2">
                     <div className="about-section">
-                        <p>I am an experienced MERN stack developer with over a 5 year of professional experience in the file.Throughout my career,I have had previleged of collabaration with prestigious organization,contributing to their success and growth. </p>
+                        <h3>I am an experienced Fullstack developer  👨‍💻 using MERN Stack Path 🚀 & also Computer Engineering Student </h3>
                         <p>My passion for MERN stack development is not only reflected in my extensive experience but also in the entusiasm and dediacation i bring  to  each project  </p>
 
                         <div className="skill">
-                            <div className="about-skill"><p>HTML &CSS</p><hr style={{ width: "50%" }} /></div>
+                            <div className="about-skill"><p>HTML & CSS</p><hr style={{ width: "50%" }} /></div>
                             <div className="about-skill"><p>React</p><hr style={{ width: "70%" }} /></div>
-                            <div className="about-skill"><p>javaScript</p><hr style={{ width: "60%" }} /></div>
-                            <div className="about-skill"><p>Node.js , express.js</p><hr style={{ width: "40%" }} /></div>
+                            <div className="about-skill"><p>JavaScript</p><hr style={{ width: "60%" }} /></div>
+                            <div className="about-skill"><p>TypeScript</p><hr style={{ width: "50%" }} /></div>
+                            <div className="about-skill"><p>Tailwind CSS</p><hr style={{ width: "80%" }} /></div>
+
+                            <div className="about-skill"><p>Node.js , Express.js</p><hr style={{ width: "40%" }} /></div>
                             <div className="about-skill"><p>mongoDB</p><hr style={{ width: "50%" }} /></div></div>
                     </div>
                 </div>
             </div>
             <div className="achivments">
                 <div className="achivment">
-                    <h1>5+</h1>
-                    <p>YEAR OF  EXPERIENCE</p>
+                    <h1>6+</h1>
+                    <p>MOUNTH EXPERIENCE  AS  A  INTERN </p>
                     {/* <hr style={{ width: "50%"}} /> */}
                     
                 </div>
@@ -45,11 +48,11 @@ export default function About() {
                 </div>
                 
                 
-                <div className="achivment">
+                {/* <div className="achivment">
                     <h1>5+</h1>
                     <p>HAPPY CLIENTS</p>
                     
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -52,10 +52,26 @@
     margin-bottom: -220px;
 }
 
+.show-more p a {
+    text-decoration: none;
+    color: white;
+}
+
 .show-more:hover{
     border: 2px solid orange;
     cursor: pointer;
     transform: scale(1.05);
     transition: 0.5s;
     gap: 25px;
+}
+.work-item p{
+   
+    font-size: 20px;
+    background: linear-gradient(267deg, rgb(255, 200, 0), rgb(220, 61, 61));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+
+
 }

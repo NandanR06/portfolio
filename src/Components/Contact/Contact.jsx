@@ -4,12 +4,14 @@ import feather from '../../assets/feather.png'
 import MailIcon from '@mui/icons-material/Mail';
 import CallIcon from '@mui/icons-material/Call';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { toast } from "react-toastify";
+
 export default function Contact() {
     const onSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
     
-        formData.append("access_key", "cfd0500d-f879-4ba9-8f7f-c27f327aadf4");
+        formData.append("access_key", "fad2cdad-f46d-43b0-8b92-4e8fcd720c11");
     
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
@@ -21,12 +23,15 @@ export default function Contact() {
             Accept: "application/json"
           },
           body: json
-        }).then((res) => res.json());
-    
-        if (res.success) {
-         
-          alert(res.message)
-        }
+        }).then((res) => 
+        {
+            res.json();
+             alert("Message sent successfully");
+            
+
+        });
+
+        
       };
     return (
         <div className='contacts-info' id='Contact'>
@@ -40,15 +45,15 @@ export default function Contact() {
                     </div>
                     <div className="contact-info-left2">
                         <MailIcon />
-                        <p>Nandan@gmail.com</p>
+                        <p>nandanr7284@gmail.com</p>
                     </div>
                     <div className="contact-info-left2">
                         <CallIcon />
-                        <p>+91 123-456-789</p>
+                        <p>+91 9008229495</p>
                     </div>
                     <div className="contact-info-left2">
                         <LocationOnIcon />
-                        <p>India</p>
+                        <p> Karnataka, India</p>
                     </div>
                 </div>
             <form className="contact-right" onSubmit={onSubmit}>

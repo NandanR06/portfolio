@@ -43,7 +43,20 @@
     padding: 10px 10px;
     transition: 1.5;
     margin-bottom: 200px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    img{
+        width: 30px;
+    }
 }
+
 .resume{
     border: 1px solid white;
     padding:10px 40px;
