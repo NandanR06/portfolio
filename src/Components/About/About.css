@@ -1,124 +1,220 @@
 .profile1 {
-    width: 430px;
-    height: 400px;
-    border-radius: 5%;
-    margin-top: 100px;
+  width: 430px;
+  height: 400px;
+  border-radius: 5%;
+  margin-top: 100px;
 }
 
 .about-me {
-    position:relative;
+  position: relative;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 90px 0px 0px 0px;
+  margin-top: -100px;
+  margin-bottom: 60px;
+}
+.about-me img {
+  z-index: -1;
+  margin-top: -70px;
+  margin-left: 60px;
+  margin-bottom: -250px;
+  transform: rotate(30deg);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  gap: 80px;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  h3 {
+    font-size: 25px;
+    font-weight: 700;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+  }
+}
+
+.skill {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  /* padding-top: 20px; */
+}
+
+.about-skill {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+
+  gap: 50px;
+  transition: 0.3s;
+}
+
+.about-skill p {
+  min-width: 150px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.about-skill hr {
+  display: flex;
+  outline: none;
+  border: none;
+  width: 50%;
+  height: 5px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, rgb(255, 200, 0), red);
+}
+
+.achivments {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.achivment {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  transition: 1.5s;
+}
+
+.achivment h1 {
+  font-size: 40px;
+  font-weight: 700;
+  background: linear-gradient(267deg, rgb(255, 200, 0), red);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.achivment p {
+  font-size: 15px;
+  font-weight: 700;
+  width: 50%;
+}
+
+.skill .about-skill:hover {
+  transform: scale(1.05);
+  transform: 0.2s;
+  cursor: pointer;
+}
+
+.achivment:hover {
+  transform: scale(1.2);
+  transform: 1.2s;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .about-me {
+    position: relative;
     display: flex;
     z-index: 1;
     align-items: center;
     justify-content: center;
-    flex-direction:column;
-    padding: 90px 0px 0px 0px;
+    flex-direction: column;
+    padding: 100px 20px 50px 20px;
     margin-top: -100px;
     margin-bottom: 60px;
-    
-}
-.about-me img{
-    z-index: -1;
-    margin-top:-70px ;
-    margin-left: 60px;
-    margin-bottom: -250px;
-transform: rotate(30deg);
-}
+    width: 200px;
+    margin-left: 400px;
+  }
 
-.row {
+  .row {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 50px;
-    gap: 80px
-}
+    gap: 80px;
+    margin-left: 480px;
+  }
 
-.about-section {
+  .about-section {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 500px;
 
-    h3{
-        font-size: 25px;
-        font-weight: 700;
-        background-clip: text;
-        -webkit-background-clip: text;
-        text-align: center;  
+    h3 {
+      font-size: 25px;
+      font-weight: 700;
+      background-clip: text;
+      -webkit-background-clip: text;
+      text-align: center;
     }
-}
+  }
 
-.skill {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    /* padding-top: 20px; */
-}
-
-.about-skill {
-    display: flex;
-    flex-direction: row;
-    /* align-items: center; */
-
-    gap: 50px;
-    transition: 0.3s;
-}
-
-.about-skill p {
-    min-width: 150px;
-    font-size: 15px;
-    font-weight: 500;
-
-}
-
-.about-skill hr {
-    display: flex;
-    outline: none;
-    border: none;
-    width: 50%;
-    height: 5px;
-    border-radius: 50px;
-    background: linear-gradient(267deg, rgb(255, 200, 0), red);
-}
-
-.achivments {
+  .achivments {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
     margin-bottom: 80px;
+    margin-left: 270px;
+  }
 }
+/* tablet view */
+@media (min-width: 480px) and (max-width: 768px) {
+  .about-me {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 20px 50px 20px;
+    margin-top: -100px;
+    margin-bottom: 60px;
+    width: 200px;
+    margin-left: 500px;
+  }
 
-.achivment {
+  .row {
     display: flex;
     align-items: center;
-    flex-direction: row;
-    gap: 20px;
-    transition: 1.5s;
-}
+    justify-content: center;
+    padding: 50px;
+    gap: 80px;
+    margin-left: 350px;
+  }
 
-.achivment h1 {
-    font-size: 40px;
-    font-weight: 700;
-    background: linear-gradient(267deg, rgb(255, 200, 0), red);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 500px;
 
-.achivment p {
-    font-size: 15px;
-    font-weight: 700;
-    width: 50%;
-}
+    h3 {
+      font-size: 25px;
+      font-weight: 700;
+      background-clip: text;
+      -webkit-background-clip: text;
+      text-align: center;
+    }
+  }
 
-.skill .about-skill:hover{
-    transform: scale(1.05);
-    transform: 0.2s;
-    cursor: pointer;
-}
-
-.achivment:hover{
-    transform: scale(1.2);
-    transform: 1.2s;
-    cursor: pointer;
+  .achivments {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 80px;
+    margin-left: 170px;
+  }
 }

@@ -19,6 +19,7 @@ export default function Hero() {
         <div className="contact">
           <img src="./linkedin.png" alt="logo" />
           <a
+            className="Link-logo"
             href="https://www.linkedin.com/in/nandan-r-fullstack/"
             smooth={true}
             duration={500}
@@ -39,6 +40,7 @@ export default function Hero() {
         <div className="contact">
           <img src="./github.png" alt="logo" />
           <a
+           className="Link-logo"
             href="https://github.com/NandanR06"
             smooth={true}
             duration={500}

@@ -1,79 +1,155 @@
 .service {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 200px;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
 }
-.my-services{
-    margin-bottom: -30px;
+.my-services {
+  margin-bottom: -30px;
 }
 
 .my-services img {
-    z-index: -1;
-    margin-top: -130px;
-    margin-left: 90px;
-    transform: rotate(30deg);
-    margin-bottom: -8px;
+  z-index: -1;
+  margin-top: -130px;
+  margin-left: 90px;
+  transform: rotate(30deg);
+  margin-bottom: -8px;
 }
 
 .my-services h1 {
-    z-index: 1;
-    position: relative;
-    margin-top: 10px;
+  z-index: 1;
+  position: relative;
+  margin-top: 10px;
 }
 
 .service-info {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 80%;
+  margin-left: 40px;
+  border-radius: 20px;
+}
+
+.service-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  margin: 90px;
+}
+.service-info h3 {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.service-info h2 {
+  background: linear-gradient(267deg, rgb(255, 200, 0), rgb(255, 38, 0));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.service-info p {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.service-info .read-me {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.service-info:hover {
+  border: 2px solid rgb(255, 111, 0);
+  transition: 0.5s;
+  transform: scale(1.05);
+  background: linear-gradient(267deg, rgb(255, 242, 0), rgb(255, 111, 0));
+  /* color: red; */
+}
+
+@media (max-width: 480px) {
+  .my-services {
+    margin-bottom: -30px;
+    margin-left: 570px;
+  }
+
+  .service-info {
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
     flex-direction: column;
     border: 2px solid white;
     padding: 20px;
     border-radius: 2px;
     cursor: pointer;
     transition: 0.4s;
-    width: 80%;
-    margin-left: 40px;
+    width: 100%;
+    margin-left: 150px;
     border-radius: 20px;
-    
-}
+  }
 
-.service-container{
+  .service-container {
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr;
-    gap:50px;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
     margin: 90px;
-}
-.service-info h3{
+    margin-left: 380px;
+  }
+  .service-info h3 {
     font-size: 30px;
-    font-weight:bolder;
-}
-.service-info h2{
-    background: linear-gradient(267deg, rgb(255, 200, 0), rgb(255, 38, 0));
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-.service-info p{
-    font-size: 15px;
-    font-weight:700;
-}
+    font-weight: bolder;
+    width: 230px;
+  }
 
-.service-info .read-me{
+  .service-info p {
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+/* tablet view */
+@media (min-width: 480px) and (max-width: 768px) {
+  .my-services {
+    margin-bottom: -30px;
+    margin-left: 470px;
+  }
+
+  .service-info {
     display: flex;
-    gap:10px;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.4s;
+    width: 100%;
+    margin-left: 150px;
+    border-radius: 20px;
+  }
+
+  .service-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin: 90px;
+    margin-left: 150px;
+  }
+  .service-info h3 {
+    font-size: 30px;
+    font-weight: bolder;
+    width: 230px;
+  }
+
+  .service-info p {
     font-size: 15px;
-    font-weight:700;
-    margin-top:20px
+    font-weight: 700;
+  }
 }
-.service-info:hover{
-    border:2px solid rgb(255, 111, 0);
-    transition: 0.5s  ;
-    transform: scale(1.05);
-    background: linear-gradient(267deg, rgb(255, 242, 0), rgb(255, 111, 0));
-    /* color: red; */
-
-}
-

@@ -24,7 +24,7 @@ export default function Navbar() {
         <ul className="menu-item" ref={menudata} >
         {/* <CloseIcon  className='clossInf'  onClick={clossVal} />  */}
           <li  ><p onClick={() => (setmenu("Home"))}>Home</p>{menu === "Home" ? <img src={feather} alt='logo' /> : ""}</li>
-          <li ><Link to="about" smooth={true} duration={500} offset={100}><p onClick={() => (setmenu("About me"))}>About me</p>{menu === "About me" ? <img src={feather} alt='logo' /> : ""}</Link></li>
+          <li ><Link to="about" smooth={true} duration={500} offset={100}><p onClick={() => (setmenu("About me"))}>About </p>{menu === "About me" ? <img src={feather} alt='logo' /> : ""}</Link></li>
           <li ><Link to="service" smooth={true} o duration={500} ffset={150}><p onClick={() => (setmenu("Services"))}>Services</p>{menu === "Services" ? <img src={feather} alt='logo' /> : ""}</Link></li>
           <li ><Link to="work" smooth={true} o duration={500} ffset={100}><p onClick={() => (setmenu("Portfolio"))}>Project</p>{menu === "Portfolio" ? <img src={feather} alt='logo' /> : ""}</Link></li>
           <li ><Link to="Contact" smooth={true} duration={500} offset={100}><p onClick={() => (setmenu("Contact"))}>Contact</p>{menu === "Contact" ? <img src={feather} alt='logo' /> : ""}</Link></li>

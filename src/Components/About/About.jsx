@@ -16,7 +16,7 @@ export default function About() {
                 </div>
                 <div className="col-2">
                     <div className="about-section">
-                        <h3>I am an experienced Fullstack developer  👨‍💻 using MERN Stack Path 🚀 & also Computer Engineering Student </h3>
+                        <h3>I am an experienced Fullstack developer  👨‍💻 using MERN Stack Path 🚀 & also Computer Science Engineering Student </h3>
                         <p>My passion for MERN stack development is not only reflected in my extensive experience but also in the entusiasm and dediacation i bring  to  each project  </p>
 
                         <div className="skill">
@@ -24,7 +24,8 @@ export default function About() {
                             <div className="about-skill"><p>React</p><hr style={{ width: "70%" }} /></div>
                             <div className="about-skill"><p>JavaScript</p><hr style={{ width: "60%" }} /></div>
                             <div className="about-skill"><p>TypeScript</p><hr style={{ width: "50%" }} /></div>
-                            <div className="about-skill"><p>Tailwind CSS</p><hr style={{ width: "80%" }} /></div>
+                            <div className="about-skill"><p>Tailwind CSS</p><hr style={{ width: "55%" }} /></div>
+                            <div className="about-skill"><p>Version Control (Git)</p><hr style={{ width: "70%" }} /></div>
 
                             <div className="about-skill"><p>Node.js , Express.js</p><hr style={{ width: "40%" }} /></div>
                             <div className="about-skill"><p>mongoDB</p><hr style={{ width: "50%" }} /></div></div>

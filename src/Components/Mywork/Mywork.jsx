@@ -25,8 +25,6 @@ export default function Mywork() {
                 <p><a href="https://github.com/NandanR06?tab=repositories">Show More</a></p>
                 <EastIcon/>
             </div>
-            
-
         </div>
     )
 }

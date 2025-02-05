@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="footer-top">
                 <div className="footer-top-left">
                     <img src={footer} alt="" />
-                    <p>I am a MERN stack developer from India with 5+ years of experience in companies like apple meta amazon</p>
+                    <p>I am an experienced Fullstack developer  👨‍💻 using MERN Stack Path  & also Computer Science Engineering Student</p>
                 </div>
                 <div className='foot-info'><div className="footer-top-right-inputVal">
                     <PersonIcon />
@@ -22,7 +22,7 @@ export default function Footer() {
             </div>
             <hr />
             <div className="footer-bottom">
-                <p className="footer-bootom-left"> @ 2024 Nandan R.All right reserved.</p>
+                <p className="footer-bootom-left">@ 2025 Nandan R.All right reserved.</p>
                 <div className="footer-bottom-right">
                     <p>Term of services</p>
                     <p>Privacy policy</p>
