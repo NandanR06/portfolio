@@ -88,7 +88,7 @@ input {
         margin: 150px 100px;
         gap: 30px;
         justify-content: space-between;
-        width: 700px;
+        width: 800px;
       }
   .footer-top {
     display: flex;
@@ -107,7 +107,7 @@ input {
     font-size: 18px;
     margin-bottom: 60px;
     width: 600px;
-    margin-left: -10px;
+    margin-left: -100px;
   }
 
 
@@ -115,10 +115,15 @@ input {
     display: flex;
     gap: 30px;
     margin-bottom: 50px;
-    margin-left: 500px;
+    margin-left: 200px;
+    white-space:nowrap;
+
   }
 
- 
+ .footer-bootom-left{
+  white-space:nowrap;
+  margin-left: 40px;
+ }
 }
 
 @media (min-width: 481px) and (max-width : 768px){
@@ -149,6 +154,7 @@ input {
   margin-bottom: 60px;
   width: 600px;
   margin-left: -10px;
+  gap: 40px;
 }
 
 
@@ -156,8 +162,13 @@ input {
   display: flex;
   gap: 30px;
   margin-bottom: 50px;
-  margin-left: 500px;
+  margin-left: 120px;
+  white-space:nowrap;
+
 }
 
-
+.footer-bootom-left{
+  white-space:nowrap;
+  margin-left: -40px;
+ }
 }

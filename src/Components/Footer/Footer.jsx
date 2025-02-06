@@ -22,7 +22,7 @@ export default function Footer() {
             </div>
             <hr />
             <div className="footer-bottom">
-                <p className="footer-bootom-left">@ 2025 Nandan R.All right reserved.</p>
+                <p className="footer-bootom-left"> © 2025 Nandan R.All right reserved.</p>
                 <div className="footer-bottom-right">
                     <p>Term of services</p>
                     <p>Privacy policy</p>
