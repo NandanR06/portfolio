@@ -1,15 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Hero.css";
 import profile from "../../assets/profile.jpg";
 import { Link } from "react-scroll";
 
 export default function Hero() {
+  const position = ["MERN stack", "Frontend", "Backend"];
+  const [currentPosition, setCurrentPosition] = useState(0);
+  const [curCharecter, setCurCarecter] = useState(0);
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    if (curCharecter < position[currentPosition].length) {
+      const interval = setTimeout(() => {
+        setData((pre) => pre + position[currentPosition][curCharecter]);
+        setCurCarecter(curCharecter + 1);
+      }, 200);
+      return () => clearInterval(interval);
+    } else {
+      setTimeout(() => {
+        setData("");
+        setCurCarecter(0);
+        setCurrentPosition((pre) => (pre + 1) % position.length);
+      }, 1000);
+    }
+  }, [currentPosition, curCharecter]);
+
   return (
     <div className="hero" id="home">
       <img src={profile} alt="profile" className="profile" />
       <h1>
-        {" "}
-        <span>I'm Nandan R</span> ,MERN stack developer based in India
+        <h1 className="name">
+          <span>I'm Nandan R,</span>
+          <span>{data}</span>
+        </h1>
+
+        <h1 className="position">developer based in India</h1>
       </h1>
       <p>
         Passionate to be a Full-Stack Web developer 👨‍💻 using MERN Stack Path 🚀
@@ -19,7 +44,6 @@ export default function Hero() {
         <div className="contact">
           <img src="./linkedin.png" alt="logo" />
           <a
-            
             href="https://www.linkedin.com/in/nandan-r-fullstack/"
             smooth={true}
             duration={500}
@@ -40,7 +64,6 @@ export default function Hero() {
         <div className="contact">
           <img src="./github.png" alt="logo" />
           <a
-          
             href="https://github.com/NandanR06"
             smooth={true}
             duration={500}
