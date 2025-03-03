@@ -13,6 +13,10 @@
   position: relative;
   margin-top: 30px;
 }
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .my-work img {
   z-index: -1;
   margin-top: -110px;
@@ -25,6 +29,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;
   width: 70%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.4s ease-in-out;
 }
 .work-content img {
   width: 300px;
@@ -37,6 +44,10 @@
   cursor: pointer;
   border: 4px solid orange;
   transition: 0.5s;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .show-more {
   display: flex;

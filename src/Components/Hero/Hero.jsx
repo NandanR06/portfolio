@@ -5,25 +5,25 @@ import { Link } from "react-scroll";
 
 export default function Hero() {
   const position = ["MERN stack", "Frontend", "Backend"];
-  const [currentPosition, setCurrentPosition] = useState(0);
+  const [currentItem, setCurrenItem] = useState(0);
   const [curCharecter, setCurCarecter] = useState(0);
-  const [data, setData] = useState("");
+  const [data, setData] = useState(" ");
 
   useEffect(() => {
-    if (curCharecter < position[currentPosition].length) {
-      const interval = setTimeout(() => {
-        setData((pre) => pre + position[currentPosition][curCharecter]);
-        setCurCarecter(curCharecter + 1);
-      }, 200);
-      return () => clearInterval(interval);
-    } else {
-      setTimeout(() => {
-        setData("");
-        setCurCarecter(0);
-        setCurrentPosition((pre) => (pre + 1) % position.length);
-      }, 1000);
+    if(curCharecter < position[currentItem].length){
+       const item = setTimeout(()=>{
+        setData((pre)=>(pre + position[currentItem][curCharecter]));
+        setCurCarecter(curCharecter +1);
+      },200);
+      return ()=>{clearTimeout(item)}
     }
-  }, [currentPosition, curCharecter]);
+    else{
+      setData("");
+      setCurCarecter(0);
+      setCurrenItem((pre)=>(pre +1) % position.length)
+    }
+    
+  }, [curCharecter,currentItem]);
 
   return (
     <div className="hero" id="home">

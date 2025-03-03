@@ -43,6 +43,14 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;
   margin: 90px;
+  opacity: 0;
+  transform: translateY(70px);
+  transition: 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .service-info h3 {
   font-size: 30px;
