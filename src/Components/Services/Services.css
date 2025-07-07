@@ -1,48 +1,38 @@
 .service {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  margin-top: 200px;
-}
-.my-services {
-  margin-bottom: -30px;
+  align-items: center;
+  margin-top: 100px;
+  padding: 0 20px;
 }
 
-.my-services img {
-  z-index: -1;
-  margin-top: -130px;
-  margin-left: 90px;
-  transform: rotate(30deg);
-  margin-bottom: -8px;
+.my-services {
+  position: relative;
+  text-align: center;
 }
 
 .my-services h1 {
-  z-index: 1;
-  position: relative;
-  margin-top: 10px;
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.service-info {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  flex-direction: column;
-  border: 2px solid white;
-  padding: 20px;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: 0.4s;
-  width: 80%;
-  margin-left: 40px;
-  border-radius: 20px;
+.my-services img {
+  position: absolute;
+  top: -50px;
+  right: 40%;
+  width: 60px;
+  transform: rotate(30deg);
+  opacity: 0.3;
 }
 
 .service-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 50px;
-  margin: 90px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 60px;
   opacity: 0;
   transform: translateY(70px);
   transition: 0.5s ease-in-out;
@@ -52,112 +42,88 @@
   opacity: 1;
   transform: translateY(0);
 }
-.service-info h3 {
-  font-size: 30px;
-  font-weight: bolder;
+
+.service-info {
+  background: #ffffff0f;
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid white;
+  transition: 0.4s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
+
+.service-info:hover {
+  border: 2px solid rgb(255, 111, 0);
+  background: linear-gradient(267deg, rgb(255, 242, 0), rgb(255, 111, 0));
+  transform: scale(1.05);
+}
+
+.service-info h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
 .service-info h2 {
+  font-size: 22px;
   background: linear-gradient(267deg, rgb(255, 200, 0), rgb(255, 38, 0));
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+
 .service-info p {
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
+  color: #555;
 }
 
-.service-info .read-me {
+.read-me {
   display: flex;
-  gap: 10px;
-  font-size: 15px;
-  font-weight: 700;
-  margin-top: 20px;
-}
-.service-info:hover {
-  border: 2px solid rgb(255, 111, 0);
-  transition: 0.5s;
-  transform: scale(1.05);
-  background: linear-gradient(267deg, rgb(255, 242, 0), rgb(255, 111, 0));
-  /* color: red; */
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 15px;
 }
 
-@media (max-width: 480px) {
-  .my-services {
-    margin-bottom: -30px;
-    margin-left: 570px;
-  }
 
-  .service-info {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-direction: column;
-    border: 2px solid white;
-    padding: 20px;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: 0.4s;
-    width: 100%;
-    margin-left: 150px;
-    border-radius: 20px;
-  }
-
-  .service-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    margin: 90px;
-    margin-left: 380px;
-  }
-  .service-info h3 {
-    font-size: 30px;
-    font-weight: bolder;
-    width: 230px;
-  }
-
-  .service-info p {
-    font-size: 15px;
-    font-weight: 700;
-  }
+.menu-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background-color: #111;
+  transition: right 0.3s ease-in-out;
+  z-index: 1001;
+  padding-top: 60px;
 }
-/* tablet view */
-@media (min-width: 480px) and (max-width: 768px) {
-  .my-services {
-    margin-bottom: -30px;
-    margin-left: 470px;
-  }
 
-  .service-info {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-direction: column;
-    border: 2px solid white;
-    padding: 20px;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: 0.4s;
-    width: 100%;
-    margin-left: 150px;
-    border-radius: 20px;
-  }
+.menu-drawer.show {
+  right: 0;
+}
 
-  .service-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    margin: 90px;
-    margin-left: 250px;
-  }
-  .service-info h3 {
-    font-size: 30px;
-    font-weight: bolder;
-    width: 230px;
-  }
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: none;
+}
 
-  .service-info p {
-    font-size: 15px;
-    font-weight: 700;
-  }
+.menu-overlay.show {
+  display: block;
+}
+
+.menu-item {
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 30px;
 }

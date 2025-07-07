@@ -18,7 +18,7 @@ export default function App() {
       <ServiceData/>
       <Mywork/>
       <Contact/>
-      <Footer/>
+      {/* <Footer/> */}
       
     </div>
   )
